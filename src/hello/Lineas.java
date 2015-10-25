@@ -2,7 +2,6 @@ package hello;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.scene.control.Slider;
 import javafx.scene.Group;
@@ -30,7 +29,7 @@ public class Lineas extends Application {
         redLine.setStrokeLineCap(StrokeLineCap.BUTT);
         
         // creating a dashed pattern
-        redLine.getStrokeDashArray().addAll(10d, 5d, 15d, 5d, 20d);
+        redLine.getStrokeDashArray().addAll(2d);
         redLine.setStrokeDashOffset(0);
  
         root.getChildren().add(redLine);
@@ -39,7 +38,9 @@ public class Lineas extends Application {
         Line whiteLine = new Line(10, 30, 200, 30);
         whiteLine.setStroke(Color.WHITE);
         whiteLine.setStrokeWidth(10);
-        whiteLine.setStrokeLineCap(StrokeLineCap.ROUND);
+        whiteLine.setStrokeLineCap(StrokeLineCap.BUTT);
+        whiteLine.getStrokeDashArray().addAll(5d);
+
  
         root.getChildren().add(whiteLine);
 
@@ -47,6 +48,7 @@ public class Lineas extends Application {
         Line blueLine = new Line(10, 50, 200, 50);
         blueLine.setStroke(Color.BLUE);
         blueLine.setStrokeWidth(10);
+        blueLine.getStrokeDashArray().addAll(2d);
          
         root.getChildren().add(blueLine);
          
@@ -79,7 +81,7 @@ public class Lineas extends Application {
     }
 
     /**
-     * Launch that shit y'all
+     * @param args Launch that shit y'all
      */
     public static void main(String[] args) {
         launch(args);
