@@ -14,7 +14,8 @@ public class Tiping extends Application{
     public static void main(String[] args) {
         Application.launch(args);
     }
-    @Override
+    
+    @Override   
     public void start(Stage stage) {
         Label nameLabel = new Label("Enter your name: ");
         TextField textField = new TextField();
@@ -35,8 +36,6 @@ public class Tiping extends Application{
         Scene scene = new Scene(root, 300, 100);
         stage.setScene(scene);
         stage.setTitle("Another test");
-        stage.show();
-        
-        
+        stage.show();   
     }
 }
